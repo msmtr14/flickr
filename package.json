@@ -28,7 +28,8 @@
     "watch:sass": "node-sass sass/main.scss src/index.css -w",
     "compile:sass": "node-sass sass/main.scss src/index.comp.css",
     "compress:css": "node-sass src/index.comp.css src/index.css --output-style compressed",
-    "sass": "concurrently \"npm run compile:sass\" \"npm run compress:css\""
+    "sass": "concurrently \"npm run compile:sass\" \"npm run compress:css\"",
+    "dev": "concurrently \"react-scripts start\" \"npm run sass\""
   },
   "eslintConfig": {
     "extends": "react-app"
