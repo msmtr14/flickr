@@ -1,0 +1,57 @@
+.header {
+    overflow: hidden;
+  background-color: #202023;
+  padding: 15px 7px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  
+  & a{
+    float: left;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
+
+    &.logo{
+        font-size: 25px;
+        font-weight: bold;
+        color: #ffffff;
+    }
+
+    &:hover{
+        color: #000000;
+    }
+
+    &.active{
+        color: white;
+    }
+  }
+
+  &-right {
+    float: right;
+    margin-right: 6%;
+  }
+
+}
+
+.btn-header {
+    color: #ffffff;
+}
+
+@media only screen and (max-width: 500px) {
+    .header{
+        & a{
+            float: none;
+            display: block;
+            text-align: left;
+        }
+        
+        &-right {
+            float: right;
+            margin-right: 3.5%;
+        }
+    }
+  }

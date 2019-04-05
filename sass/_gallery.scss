@@ -1,0 +1,131 @@
+.gallery{
+    &-img{
+        &-container{
+            position: relative;
+            text-align: center;
+
+            &:hover{
+                display: block
+            }
+        }
+
+        &-content{
+            position: absolute;
+            bottom: 3px;
+            left: 8px;
+            color: #ffffff;
+            text-overflow: ellipsis;
+            width: 50%;
+            overflow: hidden;
+            white-space: nowrap;
+            text-align: justify;
+            text-justify: inter-word;
+            display: block;
+
+            &-right{
+                position: absolute;
+                bottom: 14px;
+                right: 10px;
+                color: #ffffff;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                text-align: justify;
+                text-justify: inter-word;
+                display: block;
+            }
+        }
+    }
+}
+
+.img{
+    &-title{
+        font-weight: bold;
+    }
+
+    &-sub-title{
+        font-weight: lighter;
+    }
+}
+
+
+
+// ALTERNATE GALLERY
+
+
+
+.gal {
+    	
+	-webkit-column-count: 3; 
+    -moz-column-count: 3;
+    column-count: 3;
+      
+    & img {
+        width: 100%; padding: 2px 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .gal {
+
+	-webkit-column-count: 1; 
+    -moz-column-count: 1;
+    column-count: 1;
+    }
+}
+
+// GALLERY 1
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.img {
+    display: block;
+}
+
+.gallery1{
+    position: relative;
+    z-index: 2;
+    padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+
+    & figure {
+        -ms-flex-preferred-size: 33.333%;
+        flex-basis: 33.333%;
+        padding: 10px;
+        overflow: hidden;
+        border-radius: 10px;
+        cursor: pointer;
+
+        & img{
+            width: 100%;
+            border-radius: 10px;
+            -webkit-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+        }
+    }
+}
+
+// .grid-1-img{
+//     width: '180em'
+// }
+
+@media only screen and (max-width: 500px) {
+    .grid-1-img{
+      width: 200%;
+      display: block;
+    }
+}
